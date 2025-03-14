@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """
-This module gives a function to read and print a UTF-8 encoded text file.
+This module provides a function to read and print the contents of a UTF-8
+encoded text file.
 It follows PEP8 guidelines for formatting and readability.
 """
+
 
 def read_file(filename=""):
     """
@@ -16,11 +18,19 @@ def read_file(filename=""):
 
     Example:
         If the file 'example.txt' contains:
+
         Hello, World!
 
         Calling read_file('example.txt') will output:
+
         Hello, World!
     """
-    with open(filename, "r", encoding="utf-8") as file:
-        print(file.read(), end="")  # Using end="" to avoid extra newlines when printing
+    try:
+        with open(filename, "r", encoding="utf-8") as file:
+            for line in file:
+                print(line, end="")  # Avoid extra newlines when printing
+    except FileNotFoundError:
+        print(f"Error: The file '{filename}' was not found.")
+    except IOError:
+        print(f"Error: Could not read the file '{filename}'.")
 
