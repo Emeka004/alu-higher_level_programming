@@ -10,7 +10,7 @@ def from_json_string(my_str):
     """Returns the object (Python data structure) represented by a JSON string"""
     return json.loads(my_str)
 
-json_str = '{"name": "Alice", "age": 25}'
+json_str = '[1, 2, 3, "Holberton"]'
 my_obj = from_json_string(json_str)
 print(my_obj)
 
