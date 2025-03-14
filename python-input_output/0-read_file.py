@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module provides a function to read and print the contents of a UTF-8 encoded text file.
+This module gives a function to read and print a UTF-8 encoded text file.
 It follows PEP8 guidelines for formatting and readability.
 """
 
