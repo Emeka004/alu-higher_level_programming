@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""
+This module contains a function to read and print the contents of a UTF-8 encoded text file.
+"""
+
 def read_file(filename=""):
-    """Reads a UTF-8 text file and prints its contents to stdout."""
-    with open(filename, "r", encoding="utf-8") as file:
-        print(file.read(), end="")  # Using end="" to avoid extra newlines when printindef read_file(filename=""):
     """
     Reads a UTF-8 encoded text file and prints its contents to stdout.
     
@@ -11,6 +12,14 @@ def read_file(filename=""):
     
     Returns:
         None
+    
+    Example:
+        If the file 'example.txt' contains:
+        Hello, World!
+        
+        Calling read_file('example.txt') will output:
+        Hello, World!
     """
     with open(filename, "r", encoding="utf-8") as file:
         print(file.read(), end="")  # Using end="" to avoid extra newlines when printing
+
