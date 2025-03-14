@@ -1,36 +1,11 @@
 #!/usr/bin/python3
 """
-This module provides a function to read and print the contents of a UTF-8
-encoded text file.
-It follows PEP8 guidelines for formatting and readability.
+Module: 0-read_file.py
+Function to read a file and print its content to stdout.
 """
 
-
 def read_file(filename=""):
-    """
-    Reads a UTF-8 encoded text file and prints its contents to stdout.
-
-    Args:
-        filename (str): The name of the file to read. Defaults to an empty string.
-
-    Returns:
-        None
-
-    Example:
-        If the file 'example.txt' contains:
-
-        Hello, World!
-
-        Calling read_file('example.txt') will output:
-
-        Hello, World!
-    """
-    try:
-        with open(filename, "r", encoding="utf-8") as file:
-            for line in file:
-                print(line, end="")  # Avoid extra newlines when printing
-    except FileNotFoundError:
-        print(f"Error: The file '{filename}' was not found.")
-    except IOError:
-        print(f"Error: Could not read the file '{filename}'.")
+    """Reads a UTF-8 file and prints its content to stdout"""
+    with open(filename, 'r', encoding='utf-8') as file:
+        print(file.read(), end="")
 
