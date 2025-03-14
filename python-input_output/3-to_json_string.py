@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 import json
 """
-Module: to_json_string.py
-Function to return the JSON representation of an object.
+Module: 3-to_json_string.py
+Function to return the JSON representation of an object as a string.
 """
 
 
